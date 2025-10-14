@@ -16,7 +16,7 @@ const SignUpPage: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const { signIn } = useAuth();
+  const { signUp } = useAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -37,16 +37,12 @@ const SignUpPage: React.FC = () => {
     }
 
     try {
-      // Create user with role
-      const user = {
-        uid: `user_${Date.now()}`,
+      signUp({
         email: formData.email,
         displayName: formData.displayName,
         role: formData.role,
         language: 'en' as const
-      };
-      
-      localStorage.setItem("serviceHub_user", JSON.stringify(user));
+      });
       navigate('/dashboard');
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Sign up failed');
