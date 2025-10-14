@@ -1,0 +1,16 @@
+{
+  "name": "Service Hub",
+  "short_name": "ServiceHub",
+  "description": "Find local services in Texas",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#7c3aed",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
