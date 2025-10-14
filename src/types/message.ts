@@ -1,38 +1,20 @@
-import { User } from './user';
-
 export interface Message {
   id: string;
-  chatId: string;
+  threadId: string;
   senderId: string;
-  content: string;
-  type: 'text' | 'image' | 'file' | 'system';
-  timestamp: Date;
-  isRead: boolean;
-  sender: User;
-  attachments?: MessageAttachment[];
+  senderName: string;
+  text: string;
+  createdAt: Date;
+  read: boolean;
 }
 
-export interface MessageAttachment {
-  id: string;
-  name: string;
-  url: string;
-  type: string;
-  size: number;
-}
-
-export interface Chat {
+export interface ChatThread {
   id: string;
   jobId: string;
+  jobTitle: string;
   participants: string[];
-  lastMessage?: Message;
-  lastActivity: Date;
-  isActive: boolean;
+  participantNames: Record<string, string>;
+  lastMessage?: string;
+  lastMessageAt: Date;
   unreadCount: number;
-}
-
-export interface ChatParticipant {
-  userId: string;
-  user: User;
-  joinedAt: Date;
-  isActive: boolean;
 }

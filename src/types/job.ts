@@ -3,50 +3,13 @@ export interface Job {
   title: string;
   description: string;
   category: string;
-  subcategory?: string;
-  budget: {
-    min: number;
-    max: number;
-    type: 'fixed' | 'hourly';
-  };
-  location: {
-    city: string;
-    state: string;
-    country: string;
-    isRemote: boolean;
-  };
-  customerId: string;
-  status: 'draft' | 'open' | 'in_progress' | 'completed' | 'cancelled';
-  priority: 'low' | 'medium' | 'high' | 'urgent';
-  skills: string[];
-  attachments?: string[];
-  deadline?: Date;
+  budget: number;
+  location: { text: string; lat?: number; lng?: number };
+  media?: string[];
+  postedBy: string;
+  posterName: string;
   createdAt: Date;
-  updatedAt: Date;
-  customer: {
-    name: string;
-    avatar?: string;
-    rating?: number;
-  };
-  bids?: Bid[];
-  providerId?: string;
-  provider?: {
-    name: string;
-    avatar?: string;
-    rating?: number;
-  };
-}
-
-export interface JobCategory {
-  id: string;
-  name: string;
-  description: string;
-  icon: string;
-  subcategories?: JobSubcategory[];
-}
-
-export interface JobSubcategory {
-  id: string;
-  name: string;
-  parentId: string;
+  status: "open" | "awarded" | "in_progress" | "completed" | "canceled";
+  awardedTo?: string;
+  paymentMode: "cash";
 }

@@ -1,34 +1,15 @@
 export interface User {
-  id: string;
+  uid: string;
   email: string;
-  name: string;
-  avatar?: string;
-  role: 'customer' | 'provider';
-  phone?: string;
-  location?: string;
-  bio?: string;
-  rating?: number;
-  totalJobs?: number;
-  joinedAt: Date;
-  isVerified: boolean;
-}
-
-export interface UserProfile extends User {
+  displayName: string;
+  photoURL?: string;
+  role: "customer" | "provider" | "admin";
+  language: "en" | "es";
   skills?: string[];
-  portfolio?: string[];
-  reviews?: Review[];
-  availability?: 'available' | 'busy' | 'unavailable';
-}
-
-export interface Review {
-  id: string;
-  userId: string;
-  jobId: string;
-  rating: number;
-  comment: string;
-  createdAt: Date;
-  reviewer: {
-    name: string;
-    avatar?: string;
-  };
+  tagline?: string;
+  location?: string;
+  rating?: { avg: number; count: number };
+  isVerified?: boolean;
+  stripeCustomerId?: string;
+  hasPaymentMethod?: boolean;
 }
