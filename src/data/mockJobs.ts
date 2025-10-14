@@ -1,0 +1,82 @@
+import { Job } from '../types/job';
+
+export const mockJobs: Job[] = [
+  {
+    id: '1',
+    title: 'Kitchen Renovation - Cabinet Installation',
+    description: 'Looking for an experienced carpenter to install new kitchen cabinets. The job includes removing old cabinets and installing new ones.',
+    category: 'home-improvement',
+    budget: { min: 1500, max: 2500 },
+    location: 'San Francisco, CA',
+    customerId: 'c1',
+    customerName: 'John Smith',
+    status: 'open',
+    createdAt: '2024-10-10T10:00:00Z',
+    updatedAt: '2024-10-10T10:00:00Z',
+    deadline: '2024-11-01T00:00:00Z',
+    skills: ['carpentry', 'cabinet installation', 'tools'],
+    bidCount: 5
+  },
+  {
+    id: '2',
+    title: 'Office Deep Cleaning',
+    description: 'Need professional cleaning service for a 2000 sq ft office space. Should include carpet cleaning, window washing, and sanitization.',
+    category: 'cleaning',
+    budget: { min: 300, max: 500 },
+    location: 'New York, NY',
+    customerId: 'c2',
+    customerName: 'Sarah Johnson',
+    status: 'open',
+    createdAt: '2024-10-11T14:30:00Z',
+    updatedAt: '2024-10-11T14:30:00Z',
+    deadline: '2024-10-20T00:00:00Z',
+    skills: ['cleaning', 'carpet cleaning', 'commercial'],
+    bidCount: 8
+  },
+  {
+    id: '3',
+    title: 'Laptop Repair - Screen Replacement',
+    description: 'MacBook Pro screen needs replacement. Looking for a certified technician with experience in Apple repairs.',
+    category: 'tech-support',
+    budget: { min: 200, max: 400 },
+    location: 'Austin, TX',
+    customerId: 'c3',
+    customerName: 'Mike Davis',
+    status: 'open',
+    createdAt: '2024-10-12T09:15:00Z',
+    updatedAt: '2024-10-12T09:15:00Z',
+    skills: ['laptop repair', 'apple certified', 'screen replacement'],
+    bidCount: 3
+  },
+  {
+    id: '4',
+    title: 'Math Tutoring for High School Student',
+    description: 'Seeking a patient and experienced math tutor for calculus and algebra. 2-3 sessions per week.',
+    category: 'tutoring',
+    budget: { min: 40, max: 60 },
+    location: 'Seattle, WA',
+    customerId: 'c4',
+    customerName: 'Emily Wilson',
+    status: 'in_progress',
+    createdAt: '2024-10-08T16:00:00Z',
+    updatedAt: '2024-10-13T10:00:00Z',
+    skills: ['math', 'tutoring', 'high school'],
+    bidCount: 12
+  },
+  {
+    id: '5',
+    title: 'Wedding Photography',
+    description: 'Looking for a professional photographer for a wedding on November 15th. Must have portfolio and references.',
+    category: 'photography',
+    budget: { min: 1000, max: 2000 },
+    location: 'Los Angeles, CA',
+    customerId: 'c5',
+    customerName: 'Jessica Brown',
+    status: 'open',
+    createdAt: '2024-10-13T11:00:00Z',
+    updatedAt: '2024-10-13T11:00:00Z',
+    deadline: '2024-11-15T00:00:00Z',
+    skills: ['photography', 'wedding', 'editing'],
+    bidCount: 6
+  }
+];
