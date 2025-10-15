@@ -1,4 +1,3 @@
-import React from 'react';
 import { AuthProvider } from './context/AuthContext';
 import { JobProvider } from './context/JobContext';
 import { ChatProvider } from './context/ChatContext';
@@ -46,6 +45,10 @@ function App() {
         return <SignIn />;
       case '/signup':
         return <SignUp />;
+      case '/about':
+        return <HowItWorksPage />; // Redirect to How It Works for now
+      case '/forgot-password':
+        return <SignIn />; // Redirect to Sign In for now (can add forgot password later)
       default:
         // Check if it's a job detail page
         if (path.startsWith('/jobs/')) {
