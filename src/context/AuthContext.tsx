@@ -32,7 +32,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     }
   }, []);
 
-  const login = async (email: string, password: string) => {
+  const login = async (email: string, _password: string) => {
     // Mock login - replace with actual API call
     const mockUser: User = {
       id: '1',
@@ -51,7 +51,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     });
   };
 
-  const signup = async (email: string, password: string, name: string, role: 'customer' | 'provider') => {
+  const signup = async (email: string, _password: string, name: string, role: 'customer' | 'provider') => {
     // Mock signup - replace with actual API call
     const mockUser: User = {
       id: Math.random().toString(36).substr(2, 9),
